@@ -120,7 +120,7 @@ backend is running.
 3. Add environment variables (Render dashboard → *Environment*):
    - `SECRET_KEY` — generate one: `python -c "import secrets; print(secrets.token_hex(32))"`
    - `DATABASE_URL` — `sqlite:///./tasktracker.db`
-   - `CORS_ORIGINS` — leave as `http://localhost:5173` for now; you'll update
+   - `CORS_ORIGINS` — leave as `https://task-tracker-aisha9.vercel.app/` for now; you'll update
      this once the frontend is deployed (step 6 below).
 4. Deploy. You'll get a URL like `https://your-api.onrender.com`.
 5. **Know the trade-off**: Render's free tier has no persistent disk, and the
@@ -135,8 +135,8 @@ backend is running.
 
 1. Import the same repo, set the root directory to `frontend`.
 2. Framework preset: Vite. Build command: `npm run build`. Output directory: `dist`.
-3. Add environment variable `VITE_API_URL` = your Render backend URL from above.
-4. Deploy. You'll get a URL like `https://your-app.vercel.app`.
+3. Add environment variable `https://task-tracker-aisha9.vercel.app/` = your Render backend URL from above.
+4. Deploy. I get a URL like `https://task-tracker-aisha9.vercel.app/`.
 
 **Wire them together**
 
@@ -149,7 +149,7 @@ backend is running.
    can try it immediately, e.g.:
 
    ```markdown
-   **Live demo:** https://your-app.vercel.app (backend: https://your-api.onrender.com)
+   **Live demo:** https://task-tracker-aisha9.vercel.app/ (backend: https://your-api.onrender.com)
    ```
 
 
@@ -172,6 +172,4 @@ backend is running.
 - Swap SQLite for Postgres and deploy (Render/Fly.io for the API,
   Vercel/Netlify for the frontend)
 
-## License
 
-MIT — do whatever you'd like with this.
