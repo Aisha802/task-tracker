@@ -1,8 +1,8 @@
-from datetime import datetime, date
+from datetime import date, datetime
 from enum import Enum
 from typing import Optional
 
-from sqlmodel import SQLModel, Field, Relationship
+from sqlmodel import Field, Relationship, SQLModel
 
 
 class TaskStatus(str, Enum):
